@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercy & Ayodeji | #TheMVlovewave’26</title>
-
-    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
     
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+
+    <meta property="og:title" content="Mercy & Ayodeji | #TheMVlovewave’26">
+    <meta property="og:description" content="Join us in celebrating the union of Mercy Oluwabukola & Ayodeji Victor. March 20-21, 2026 • Ilorin.">
+    <meta property="og:image" content="https://mercy-victor-pi.vercel.app/images/hero.jpg">
+    <meta property="og:url" content="https://mercy-victor-pi.vercel.app/">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -67,16 +73,6 @@
         .story-block { margin-bottom: 60px; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         .story-text { line-height: 1.8; color: #444; text-align: justify; }
 
-        /* --- TIMELINE --- */
-        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px auto; max-width: 600px; }
-        .t-item { margin-bottom: 40px; position: relative; }
-        .t-item::before {
-            content: ''; position: absolute; left: -36px; top: 5px;
-            width: 12px; height: 12px; background: var(--burgundy); border-radius: 50%;
-        }
-        .t-date { color: var(--gold); font-weight: bold; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase; }
-        .t-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #333; margin: 5px 0; }
-        
         /* --- TIMELINE (ALTERNATING) --- */
         .timeline-alt { position: relative; max-width: 800px; margin: 0 auto; }
         .timeline-alt::after { content: ''; position: absolute; width: 4px; background-color: var(--gold); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
@@ -88,6 +84,8 @@
         .right::before { content: " "; height: 0; position: absolute; top: 18px; width: 0; z-index: 1; left: 30px; border: medium solid white; border-width: 10px 10px 10px 0; border-color: transparent white transparent transparent; }
         .right::after { left: -10px; }
         .t-content { padding: 20px 30px; background-color: white; position: relative; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .t-date { color: var(--gold); font-weight: bold; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase; }
+        .t-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #333; margin: 5px 0; }
 
         /* --- ENTOURAGE (THE SQUAD) --- */
         .entourage-section {
@@ -105,7 +103,11 @@
         }
         .e-card img {
             width: 130px; height: 130px; border-radius: 50%; border: 3px solid var(--gold);
-            margin: 0 auto 10px; background: white; object-fit: cover; object-position: top center;
+            margin: 0 auto 10px; background: white; 
+            object-fit: cover; 
+            
+            /* === THE FIX: Focus 20% down from the top === */
+            object-position: center 20%; 
         }
         .e-role { color: #ffebcd; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; font-weight: bold; }
         .e-name { font-size: 1.1rem; font-family: 'Playfair Display', serif; line-height: 1.2; margin-top: 5px; }
@@ -210,15 +212,18 @@
             <p style="letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px;">Our Support System</p>
             
             <div class="entourage-grid">
-                <div class="e-card"><img src="images/trad-standing.jpg"><div class="e-role">The Couple</div><div class="e-name">Mercy & Victor</div></div>
                 <div class="e-card"><img src="images/dami.jpeg"><div class="e-role">Chief Bridesmaid</div><div class="e-name">Oluwadamilola E. Ajanaku</div></div>
-                <div class="e-card"><img src="images/olusola.jpg"><div class="e-role">BestMan</div><div class="e-name">Olusola KaleJaiye</div></div>
+                <div class="e-card"><img src="images/olusola.jpg"><div class="e-role">Best Man</div><div class="e-name">Olusola KaleJaiye</div></div>
                 
                 <div class="e-card"><img src="images/emma.jpeg"><div class="e-role">Groomsman</div><div class="e-name">Emmanuel Eze</div></div>
                 <div class="e-card"><img src="images/victor.jpg"><div class="e-role">Groomsman</div><div class="e-name">Victor Are</div></div>
+                <div class="e-card"><img src="images/olu.jpg"><div class="e-role">Groomsman</div><div class="e-name">Olusola Kalejaiye</div></div>
                 <div class="e-card"><img src="images/bolaji.jpg"><div class="e-role">Groomsman</div><div class="e-name">Bolaji Afolabi</div></div>
                 <div class="e-card"><img src="images/praise.jpg"><div class="e-role">Groomsman</div><div class="e-name">Praise OlorunToba</div></div>
                 <div class="e-card"><img src="images/raji.jpg"><div class="e-role">Groomsman</div><div class="e-name">Adedeji Raji</div></div>
+                
+                <div class="e-card"><img src="images/davies.jpeg"><div class="e-role">Groomsman</div><div class="e-name">Davies Are</div></div>
+                <div class="e-card"><img src="images/tobi.jpeg"><div class="e-role">Groomsman</div><div class="e-name">Tobi Ariyo</div></div>
 
                 <div class="e-card"><img src="images/funmi.jpeg"><div class="e-role">Bridesmaid</div><div class="e-name">Jesutofunmi J. Owolabi</div></div>
                 <div class="e-card"><img src="images/glory.jpeg"><div class="e-role">Bridesmaid</div><div class="e-name">God’sglory E. Ogbonna</div></div>
@@ -258,9 +263,7 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="gallery-category">
+        <div class="gallery-category">
             <h3 class="gallery-cat-title">Life Lately & Unfiltered</h3>
             <div class="gallery-lineup">
                 <div class="gallery-item" data-aos="fade-up"><img src="images/1.jpeg"></div>
@@ -306,15 +309,13 @@
         <h2 class="section-title">A Toast</h2>
         <div class="toast-box" data-aos="zoom-in">
             <p class="toast-text">
-                To our parents, families, friends, and every aunty, uncle, cousin, and everyone who made it here 😉 thank you for surrounding us with so much love.
-
-They say it takes a village, and clearly, ours showed up in full colour, full laughter, and full support. From the prayers and advice, to the teasing, dancing, and “when is it happening?” questions, we wouldn’t be here without you.
+                To our parents, families, friends, and every aunty, uncle, cousin, and everyone who made it here — thank you for surrounding us with so much love.
+                <br><br>
+                They say it takes a village, and clearly, ours showed up in full colour, full laughter, and full support. From the prayers and advice, to the teasing, dancing, and “when is it happening?” questions, we wouldn’t be here without you.
                 <br><br>
                 Today, we don’t just join hands, we join families, cultures, stories, and plenty of traditions both old and new. Thank you for celebrating with us, for cheering us on, and for being part of our forever.
-
-So eat well, laugh loudly, dance freely, and help us make memories we’ll talk about for years to come.
-
-Here’s to love, to family, to culture, and to this beautiful new chapter. 🥂
+                <br><br>
+                So eat well, laugh loudly, dance freely, and help us make memories we’ll talk about for years to come. Here’s to love, to family, to culture, and to this beautiful new chapter. 🥂
                 <br><br>
                 <span style="font-weight:bold; font-style:normal;">With all our love,<br>Mercy and Ayodeji Ajayi.</span>
             </p>
